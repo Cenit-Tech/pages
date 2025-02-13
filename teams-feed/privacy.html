@@ -6,6 +6,10 @@
          name="viewport"
          content="width=device-width, initial-scale=1.0"
       />
+      <meta
+         name="description"
+         content="Privacy Policy for [Your App Name]"
+      />
       <title>Privacy Policy for [Your App Name]</title>
       <style>
          /* General Styles */
@@ -24,7 +28,7 @@
             margin: 50px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
          }
 
@@ -54,9 +58,11 @@
          a {
             color: #1a73e8;
             text-decoration: none;
+            transition: color 0.3s ease;
          }
 
          a:hover {
+            color: #1557b0;
             text-decoration: underline;
          }
 
@@ -122,66 +128,78 @@
    </head>
    <body>
       <div class="container">
-         <h1>Privacy Policy for [Your App Name]</h1>
-         <p><strong>Last Updated:</strong> [Date]</p>
-         <p>
-            <strong>Policy URL:</strong>
-            <a href="[Insert valid URL where this policy is hosted]"
-               >[Insert valid URL where this policy is hosted]</a
-            >
-         </p>
+         <header>
+            <h1>Privacy Policy for [Your App Name]</h1>
+            <p><strong>Last Updated:</strong> [Date]</p>
+            <p>
+               <strong>Policy URL:</strong>
+               <a href="[Insert valid URL where this policy is hosted]"
+                  >[Insert valid URL where this policy is hosted]</a
+               >
+            </p>
+         </header>
 
-         <h2>1. Data Handling</h2>
-         <p>
-            <strong>[Your App Name]</strong> is a SharePoint webpart that
-            displays Microsoft Teams Channel chat messages through Microsoft
-            Graph API integration. This privacy policy explains how we handle
-            your information.
-         </p>
-         <p>
-            This webpart does <strong>not</strong> collect, store, transmit, or
-            process any personal/user data. It acts as a read-only interface to
-            display Teams chat content retrieved directly from Microsoft Graph
-            API. All data remains under Microsoft 365’s existing security
-            controls.
-         </p>
+         <section>
+            <h2>1. Data Handling</h2>
+            <p>
+               <strong>[Your App Name]</strong> is a SharePoint webpart that
+               displays Microsoft Teams Channel chat messages through Microsoft
+               Graph API integration. This privacy policy explains how we handle
+               your information.
+            </p>
+            <p>
+               This webpart does <strong>not</strong> collect, store, transmit,
+               or process any personal/user data. It acts as a read-only
+               interface to display Teams chat content retrieved directly from
+               Microsoft Graph API. All data remains under Microsoft 365’s
+               existing security controls.
+            </p>
+         </section>
 
-         <h2>2. Authentication</h2>
-         <p>
-            Authentication occurs through Microsoft Entra ID (Azure AD). We
-            never access or store your Microsoft credentials.
-         </p>
+         <section>
+            <h2>2. Authentication</h2>
+            <p>
+               Authentication occurs through Microsoft Entra ID (Azure AD). We
+               never access or store your Microsoft credentials.
+            </p>
+         </section>
 
-         <h2>3. No Third-Party Sharing</h2>
-         <p>
-            No data passes through external servers – all interactions occur
-            between your SharePoint environment and Microsoft’s Graph API.
-         </p>
+         <section>
+            <h2>3. No Third-Party Sharing</h2>
+            <p>
+               No data passes through external servers – all interactions occur
+               between your SharePoint environment and Microsoft’s Graph API.
+            </p>
+         </section>
 
-         <h2>4. Compliance</h2>
-         <p>
-            We comply with Microsoft’s API terms of service and data protection
-            requirements. Your organization retains full control over Teams chat
-            data permissions.
-         </p>
+         <section>
+            <h2>4. Compliance</h2>
+            <p>
+               We comply with Microsoft’s API terms of service and data
+               protection requirements. Your organization retains full control
+               over Teams chat data permissions.
+            </p>
+         </section>
 
          <hr />
 
-         <h2>Key Compliance Notes</h2>
-         <ul>
-            <li>Explicitly names your app</li>
-            <li>Confirms no data storage/transmission</li>
-            <li>References Microsoft Graph API flow</li>
-            <li>Includes working URL</li>
-            <li>Focused on app/service (not website)</li>
-         </ul>
+         <section>
+            <h2>Key Compliance Notes</h2>
+            <ul>
+               <li>Explicitly names your app</li>
+               <li>Confirms no data storage/transmission</li>
+               <li>References Microsoft Graph API flow</li>
+               <li>Includes working URL</li>
+               <li>Focused on app/service (not website)</li>
+            </ul>
+         </section>
 
-         <div class="contact">
+         <footer class="contact">
             <p>
                For questions, contact
                <a href="mailto:[your email address]">[your email address]</a>.
             </p>
-         </div>
+         </footer>
       </div>
    </body>
 </html>
