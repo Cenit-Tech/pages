@@ -11,38 +11,85 @@
          content="Privacy Policy for [Your App Name]"
       />
       <title>Privacy Policy for [Your App Name]</title>
+      <link
+         rel="preconnect"
+         href="https://fonts.googleapis.com"
+      />
+      <link
+         rel="preconnect"
+         href="https://fonts.gstatic.com"
+         crossorigin
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="16x16"
+         href="../img/favicon-16x16.png"
+      />
       <style>
          /* General Styles */
          body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Plus Jakarta Sans", serif;
+            font-optical-sizing: auto;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background: url("../img/cts-bg.png") no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            background-color: #000;
          }
 
          /* Container */
          .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+         }
+
+         /* Header */
+         .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 1600px;
+            margin: 0 auto;
+         }
+
+         .header img {
+            width: 300px;
+            height: auto;
+            margin-left: 25px;
+         }
+
+         .header .center,
+         .header .right {
+            flex: 1;
+            text-align: center;
+         }
+         .header .right {
+            text-align: right;
          }
 
          /* Headings */
          h1 {
             font-size: 2.5rem;
-            color: #1a73e8;
+            color: #fff;
             margin-bottom: 20px;
             text-align: center;
          }
 
          h2 {
             font-size: 1.8rem;
-            color: #1a73e8;
+            color: #fff;
             margin-top: 30px;
             margin-bottom: 15px;
          }
@@ -50,20 +97,21 @@
          /* Paragraphs */
          p {
             font-size: 1rem;
-            color: #555;
+            color: #fff;
             margin-bottom: 15px;
          }
 
          /* Links */
          a {
-            color: #1a73e8;
+            color: #fff;
             text-decoration: none;
+            border-bottom: 1px solid #fff;
             transition: color 0.3s ease;
          }
 
          a:hover {
-            color: #1557b0;
-            text-decoration: underline;
+            color: #fff;
+            border-bottom: 1px dashed #fff;
          }
 
          /* Lists */
@@ -73,28 +121,31 @@
          }
 
          ul li {
-            background-color: #f1f1f1;
+            background-color: rgba(255, 255, 255, 0.1);
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 4px;
             font-size: 0.95rem;
-            color: #555;
+            color: #fff;
+            padding-left: 26px;
          }
 
          ul li::before {
             content: "✓";
-            color: #1a73e8;
+            color: #dee81a;
             font-weight: bold;
             display: inline-block;
             width: 1em;
             margin-left: -1em;
+            margin-right: 10px;
+            font-weight: 1.2em;
          }
 
          /* Horizontal Rule */
          hr {
             border: 0;
             height: 1px;
-            background: #ddd;
+            background: rgba(255, 255, 255, 0.2);
             margin: 30px 0;
          }
 
@@ -107,6 +158,7 @@
          .contact a {
             font-size: 1.1rem;
             font-weight: bold;
+            color: #1a73e8;
          }
 
          /* Responsive Design */
@@ -123,26 +175,74 @@
             h2 {
                font-size: 1.5rem;
             }
+
+            .header img {
+               width: 300px; /* Adjust logo size for smaller screens */
+            }
+         }
+         .button {
+            background-color: transparent; /* Transparent background */
+            color: white; /* White text */
+            border: 1px solid white; /* White border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Padding for better spacing */
+            font-size: 1rem; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+         }
+         .button:hover {
+            background-color: rgba(
+               255,
+               255,
+               255,
+               0.1
+            ); /* Slight white background on hover */
+            border-color: rgba(
+               255,
+               255,
+               255,
+               0.8
+            ); /* Slightly lighter border on hover */
+         }
+
+         .button:active {
+            background-color: rgba(
+               255,
+               255,
+               255,
+               0.2
+            ); /* Darker white background on click */
+            border-color: rgba(
+               255,
+               255,
+               255,
+               1
+            ); /* Fully white border on click */
          }
       </style>
    </head>
    <body>
+      <header class="header">
+         <div class="left">
+            <img
+               src="../img/cts-logo-white.png"
+               alt="CTS Logo"
+            />
+         </div>
+         <div class="center"></div>
+         <div class="right">
+            <button class="button">Contact</button>
+         </div>
+      </header>
+
       <div class="container">
-         <header>
-            <h1>Privacy Policy for [Your App Name]</h1>
-            <p><strong>Last Updated:</strong> [Date]</p>
-            <p>
-               <strong>Policy URL:</strong>
-               <a href="[Insert valid URL where this policy is hosted]"
-                  >[Insert valid URL where this policy is hosted]</a
-               >
-            </p>
-         </header>
+         <h1>Privacy Policy for 'Teams Chat Stream in SharePoint'</h1>
+         <p><strong>Last Updated:</strong> Feb 13th, 2025</p>
 
          <section>
             <h2>1. Data Handling</h2>
             <p>
-               <strong>[Your App Name]</strong> is a SharePoint webpart that
+               <strong>Teams Stream</strong> is a SharePoint webpart that
                displays Microsoft Teams Channel chat messages through Microsoft
                Graph API integration. This privacy policy explains how we handle
                your information.
@@ -161,6 +261,10 @@
             <p>
                Authentication occurs through Microsoft Entra ID (Azure AD). We
                never access or store your Microsoft credentials.
+            </p>
+            <p>
+               Users must have access to the Microsoft Team in order to view the
+               chat stream
             </p>
          </section>
 
@@ -195,10 +299,7 @@
          </section>
 
          <footer class="contact">
-            <p>
-               For questions, contact
-               <a href="mailto:[your email address]">[your email address]</a>.
-            </p>
+            <p>For questions, contact us</p>
          </footer>
       </div>
    </body>
